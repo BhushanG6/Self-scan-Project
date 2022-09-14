@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18D7ED3A28CF30D90014A338 /* PoseNetInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7ED3928CF30D90014A338 /* PoseNetInput.swift */; };
+		18D7ED3C28CF330D0014A338 /* PoseNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7ED3B28CF330D0014A338 /* PoseNet.swift */; };
+		18D7ED3E28CF361F0014A338 /* PoseNetOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7ED3D28CF361F0014A338 /* PoseNetOutput.swift */; };
+		18D7ED4028CF383B0014A338 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7ED3F28CF383B0014A338 /* Pose.swift */; };
+		18D7ED4228CF38820014A338 /* PoseBuilder+Single.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7ED4128CF38820014A338 /* PoseBuilder+Single.swift */; };
+		18D7ED4428CF3B510014A338 /* PoseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7ED4328CF3B510014A338 /* PoseBuilder.swift */; };
+		18D7ED4628CF3B950014A338 /* PoseBuilderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7ED4528CF3B950014A338 /* PoseBuilderConfiguration.swift */; };
+		18D7ED4828CF42A10014A338 /* Joint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7ED4728CF42A10014A338 /* Joint.swift */; };
+		18D7ED4A28CF42BA0014A338 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 18D7ED4928CF42BA0014A338 /* PoseNetMobileNet075S16FP16.mlmodel */; };
+		18D7ED4C28CF43310014A338 /* CGImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7ED4B28CF43310014A338 /* CGImage+Extension.swift */; };
+		E73DD13124636FEF00D77039 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DD13024636FEF00D77039 /* AppDelegate.swift */; };
+		E73DD13324636FEF00D77039 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E73DD13224636FEF00D77039 /* Shaders.metal */; };
+		E73DD13624636FEF00D77039 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DD13524636FEF00D77039 /* Renderer.swift */; };
+		E73DD13824636FEF00D77039 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DD13724636FEF00D77039 /* ViewController.swift */; };
+		E73DD13B24636FEF00D77039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E73DD13924636FEF00D77039 /* Main.storyboard */; };
+		E73DD13D24636FF100D77039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E73DD13C24636FF100D77039 /* Assets.xcassets */; };
+		E73DD14024636FF100D77039 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E73DD13E24636FF100D77039 /* LaunchScreen.storyboard */; };
+		E7B7223B24807ACA002E43E8 /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7223A24807ACA002E43E8 /* MetalBuffer.swift */; };
+		E7B7223D24809D1E002E43E8 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7223C24809D1E002E43E8 /* Helpers.swift */; };
+		F41D7078287995B100C03A9B /* sharedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41D7077287995B100C03A9B /* sharedViewModel.swift */; };
+		F41D707A287995E600C03A9B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41D7079287995E600C03A9B /* Logger.swift */; };
+		F41D707F287998AB00C03A9B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F41D707E287998AB00C03A9B /* FirebaseAnalytics */; };
+		F41D7081287998AB00C03A9B /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F41D7080287998AB00C03A9B /* FirebaseAnalyticsSwift */; };
+		F41D7083287998AB00C03A9B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F41D7082287998AB00C03A9B /* FirebaseAuth */; };
+		F41D7085287998AB00C03A9B /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F41D7084287998AB00C03A9B /* FirebaseAuthCombine-Community */; };
+		F41D7087287998AB00C03A9B /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = F41D7086287998AB00C03A9B /* FirebaseCrashlytics */; };
+		F41D7089287998AB00C03A9B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F41D7088287998AB00C03A9B /* FirebaseDatabase */; };
+		F41D708B287998AB00C03A9B /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = F41D708A287998AB00C03A9B /* FirebaseFunctions */; };
+		F41D708D287998AB00C03A9B /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = F41D708C287998AB00C03A9B /* FirebaseInstallations */; };
+		F41D708F287998AB00C03A9B /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = F41D708E287998AB00C03A9B /* FirebasePerformance */; };
+		F41D7091287998AB00C03A9B /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = F41D7090287998AB00C03A9B /* FirebaseRemoteConfig */; };
+		F41D70942879A5FA00C03A9B /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = F41D70932879A5FA00C03A9B /* SwiftKeychainWrapper */; };
+		F41D70972879C78E00C03A9B /* PointCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41D70962879C78E00C03A9B /* PointCloud.swift */; };
+		F41D70992879C7A000C03A9B /* PointCloudVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41D70982879C7A000C03A9B /* PointCloudVertex.swift */; };
+		F41D709B2879C7D500C03A9B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41D709A2879C7D500C03A9B /* Utils.swift */; };
+		F41D709D2879C7DE00C03A9B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41D709C2879C7DE00C03A9B /* Event.swift */; };
+		F41D709F2879D7A000C03A9B /* ShowPointCloudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41D709E2879D7A000C03A9B /* ShowPointCloudViewController.swift */; };
+		F41D70A1287AFC4200C03A9B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F41D70A0287AFC4200C03A9B /* art.scnassets */; };
+		F41D70B7287B1EFE00C03A9B /* ply_sancfile.scn in Resources */ = {isa = PBXBuildFile; fileRef = F41D70B6287B1EFE00C03A9B /* ply_sancfile.scn */; };
+		F4457B9E287D495F00D244DA /* ply_color.scn in Resources */ = {isa = PBXBuildFile; fileRef = F4457B9D287D495F00D244DA /* ply_color.scn */; };
+		F44AD5262878717100CF03DB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AD5252878717100CF03DB /* Extension.swift */; };
+		F4895BD828B630F300FEC5AB /* turn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4895BD728B630F300FEC5AB /* turn.mp3 */; };
+		F48C2A0128AE648B00959B0B /* Start_view_controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48C2A0028AE648B00959B0B /* Start_view_controller.swift */; };
+		F4FD65E8287BE705003D15ED /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD65E7287BE705003D15ED /* Loader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18D7ED3928CF30D90014A338 /* PoseNetInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseNetInput.swift; sourceTree = "<group>"; };
+		18D7ED3B28CF330D0014A338 /* PoseNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseNet.swift; sourceTree = "<group>"; };
+		18D7ED3D28CF361F0014A338 /* PoseNetOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseNetOutput.swift; sourceTree = "<group>"; };
+		18D7ED3F28CF383B0014A338 /* Pose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
+		18D7ED4128CF38820014A338 /* PoseBuilder+Single.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PoseBuilder+Single.swift"; sourceTree = "<group>"; };
+		18D7ED4328CF3B510014A338 /* PoseBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseBuilder.swift; sourceTree = "<group>"; };
+		18D7ED4528CF3B950014A338 /* PoseBuilderConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseBuilderConfiguration.swift; sourceTree = "<group>"; };
+		18D7ED4728CF42A10014A338 /* Joint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joint.swift; sourceTree = "<group>"; };
+		18D7ED4928CF42BA0014A338 /* PoseNetMobileNet075S16FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseNetMobileNet075S16FP16.mlmodel; sourceTree = "<group>"; };
+		18D7ED4B28CF43310014A338 /* CGImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+Extension.swift"; sourceTree = "<group>"; };
+		948146554F46E56B015690CC /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		B57D60B9736905755DECF7CE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E73DD12D24636FEF00D77039 /* Point Cloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Point Cloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73DD13024636FEF00D77039 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E73DD13224636FEF00D77039 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		E73DD13424636FEF00D77039 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
+		E73DD13524636FEF00D77039 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		E73DD13724636FEF00D77039 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E73DD13A24636FEF00D77039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E73DD13C24636FF100D77039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E73DD13F24636FF100D77039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E73DD14124636FF100D77039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E73DD14224636FF100D77039 /* SceneDepthPointCloud-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SceneDepthPointCloud-Bridging-Header.h"; sourceTree = "<group>"; };
+		E7B7223A24807ACA002E43E8 /* MetalBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
+		E7B7223C24809D1E002E43E8 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		E7E2ED6F1473F1FD1E9543FA /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F41D7077287995B100C03A9B /* sharedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharedViewModel.swift; sourceTree = "<group>"; };
+		F41D7079287995E600C03A9B /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		F41D70962879C78E00C03A9B /* PointCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCloud.swift; sourceTree = "<group>"; };
+		F41D70982879C7A000C03A9B /* PointCloudVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCloudVertex.swift; sourceTree = "<group>"; };
+		F41D709A2879C7D500C03A9B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F41D709C2879C7DE00C03A9B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		F41D709E2879D7A000C03A9B /* ShowPointCloudViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPointCloudViewController.swift; sourceTree = "<group>"; };
+		F41D70A0287AFC4200C03A9B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		F41D70B6287B1EFE00C03A9B /* ply_sancfile.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ply_sancfile.scn; sourceTree = "<group>"; };
+		F4457B9D287D495F00D244DA /* ply_color.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ply_color.scn; sourceTree = "<group>"; };
+		F44AD5252878717100CF03DB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F4895BD728B630F300FEC5AB /* turn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = turn.mp3; sourceTree = "<group>"; };
+		F48C2A0028AE648B00959B0B /* Start_view_controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start_view_controller.swift; sourceTree = "<group>"; };
+		F4FD65E7287BE705003D15ED /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E73DD12A24636FEF00D77039 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F41D7089287998AB00C03A9B /* FirebaseDatabase in Frameworks */,
+				F41D708B287998AB00C03A9B /* FirebaseFunctions in Frameworks */,
+				F41D708F287998AB00C03A9B /* FirebasePerformance in Frameworks */,
+				F41D7081287998AB00C03A9B /* FirebaseAnalyticsSwift in Frameworks */,
+				F41D708D287998AB00C03A9B /* FirebaseInstallations in Frameworks */,
+				F41D7083287998AB00C03A9B /* FirebaseAuth in Frameworks */,
+				F41D7087287998AB00C03A9B /* FirebaseCrashlytics in Frameworks */,
+				F41D707F287998AB00C03A9B /* FirebaseAnalytics in Frameworks */,
+				F41D7085287998AB00C03A9B /* FirebaseAuthCombine-Community in Frameworks */,
+				F41D70942879A5FA00C03A9B /* SwiftKeychainWrapper in Frameworks */,
+				F41D7091287998AB00C03A9B /* FirebaseRemoteConfig in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6415A999BE1C768F18B2649 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				948146554F46E56B015690CC /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		BF2DD93DB9836723DA6BED14 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				E7E2ED6F1473F1FD1E9543FA /* LICENSE.txt */,
+			);
+			path = LICENSE;
+			sourceTree = "<group>";
+		};
+		E73DD12424636FEF00D77039 = {
+			isa = PBXGroup;
+			children = (
+				B57D60B9736905755DECF7CE /* README.md */,
+				E73DD12F24636FEF00D77039 /* SceneDepthPointCloud */,
+				E73DD12E24636FEF00D77039 /* Products */,
+				A6415A999BE1C768F18B2649 /* Configuration */,
+				BF2DD93DB9836723DA6BED14 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		E73DD12E24636FEF00D77039 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E73DD12D24636FEF00D77039 /* Point Cloud.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E73DD12F24636FEF00D77039 /* SceneDepthPointCloud */ = {
+			isa = PBXGroup;
+			children = (
+				E73DD13024636FEF00D77039 /* AppDelegate.swift */,
+				18D7ED4728CF42A10014A338 /* Joint.swift */,
+				18D7ED4128CF38820014A338 /* PoseBuilder+Single.swift */,
+				18D7ED4528CF3B950014A338 /* PoseBuilderConfiguration.swift */,
+				18D7ED4928CF42BA0014A338 /* PoseNetMobileNet075S16FP16.mlmodel */,
+				18D7ED4328CF3B510014A338 /* PoseBuilder.swift */,
+				18D7ED3928CF30D90014A338 /* PoseNetInput.swift */,
+				18D7ED3F28CF383B0014A338 /* Pose.swift */,
+				18D7ED3D28CF361F0014A338 /* PoseNetOutput.swift */,
+				E73DD13724636FEF00D77039 /* ViewController.swift */,
+				18D7ED3B28CF330D0014A338 /* PoseNet.swift */,
+				18D7ED4B28CF43310014A338 /* CGImage+Extension.swift */,
+				F4FD65E7287BE705003D15ED /* Loader.swift */,
+				F41D709E2879D7A000C03A9B /* ShowPointCloudViewController.swift */,
+				F48C2A0028AE648B00959B0B /* Start_view_controller.swift */,
+				F4457B9D287D495F00D244DA /* ply_color.scn */,
+				F41D70B6287B1EFE00C03A9B /* ply_sancfile.scn */,
+				F44AD5252878717100CF03DB /* Extension.swift */,
+				E73DD13224636FEF00D77039 /* Shaders.metal */,
+				E73DD13424636FEF00D77039 /* ShaderTypes.h */,
+				E7B7223A24807ACA002E43E8 /* MetalBuffer.swift */,
+				E73DD13524636FEF00D77039 /* Renderer.swift */,
+				F4895BD728B630F300FEC5AB /* turn.mp3 */,
+				F41D7077287995B100C03A9B /* sharedViewModel.swift */,
+				F41D70A0287AFC4200C03A9B /* art.scnassets */,
+				F41D70952879C75000C03A9B /* components */,
+				F41D707B287995F300C03A9B /* Utilities */,
+				E73DD13924636FEF00D77039 /* Main.storyboard */,
+				E73DD13C24636FF100D77039 /* Assets.xcassets */,
+				E73DD13E24636FF100D77039 /* LaunchScreen.storyboard */,
+				E73DD14124636FF100D77039 /* Info.plist */,
+				E73DD14224636FF100D77039 /* SceneDepthPointCloud-Bridging-Header.h */,
+			);
+			path = SceneDepthPointCloud;
+			sourceTree = "<group>";
+		};
+		F41D707B287995F300C03A9B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F41D7079287995E600C03A9B /* Logger.swift */,
+				E7B7223C24809D1E002E43E8 /* Helpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F41D70952879C75000C03A9B /* components */ = {
+			isa = PBXGroup;
+			children = (
+				F41D70962879C78E00C03A9B /* PointCloud.swift */,
+				F41D70982879C7A000C03A9B /* PointCloudVertex.swift */,
+				F41D709A2879C7D500C03A9B /* Utils.swift */,
+				F41D709C2879C7DE00C03A9B /* Event.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E73DD12C24636FEF00D77039 /* SceneDepthPointCloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E73DD14524636FF100D77039 /* Build configuration list for PBXNativeTarget "SceneDepthPointCloud" */;
+			buildPhases = (
+				E73DD12924636FEF00D77039 /* Sources */,
+				E73DD12A24636FEF00D77039 /* Frameworks */,
+				E73DD12B24636FEF00D77039 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SceneDepthPointCloud;
+			packageProductDependencies = (
+				F41D707E287998AB00C03A9B /* FirebaseAnalytics */,
+				F41D7080287998AB00C03A9B /* FirebaseAnalyticsSwift */,
+				F41D7082287998AB00C03A9B /* FirebaseAuth */,
+				F41D7084287998AB00C03A9B /* FirebaseAuthCombine-Community */,
+				F41D7086287998AB00C03A9B /* FirebaseCrashlytics */,
+				F41D7088287998AB00C03A9B /* FirebaseDatabase */,
+				F41D708A287998AB00C03A9B /* FirebaseFunctions */,
+				F41D708C287998AB00C03A9B /* FirebaseInstallations */,
+				F41D708E287998AB00C03A9B /* FirebasePerformance */,
+				F41D7090287998AB00C03A9B /* FirebaseRemoteConfig */,
+				F41D70932879A5FA00C03A9B /* SwiftKeychainWrapper */,
+			);
+			productName = SceneDepthDemo;
+			productReference = E73DD12D24636FEF00D77039 /* Point Cloud.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E73DD12524636FEF00D77039 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					E73DD12C24636FEF00D77039 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = E73DD12824636FEF00D77039 /* Build configuration list for PBXProject "SceneDepthPointCloud" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E73DD12424636FEF00D77039;
+			packageReferences = (
+				F41D707D287998AB00C03A9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F41D70922879A5FA00C03A9B /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+			);
+			productRefGroup = E73DD12E24636FEF00D77039 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E73DD12C24636FEF00D77039 /* SceneDepthPointCloud */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E73DD12B24636FEF00D77039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4895BD828B630F300FEC5AB /* turn.mp3 in Resources */,
+				E73DD14024636FF100D77039 /* LaunchScreen.storyboard in Resources */,
+				F41D70A1287AFC4200C03A9B /* art.scnassets in Resources */,
+				E73DD13D24636FF100D77039 /* Assets.xcassets in Resources */,
+				E73DD13B24636FEF00D77039 /* Main.storyboard in Resources */,
+				F4457B9E287D495F00D244DA /* ply_color.scn in Resources */,
+				F41D70B7287B1EFE00C03A9B /* ply_sancfile.scn in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E73DD12924636FEF00D77039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18D7ED3A28CF30D90014A338 /* PoseNetInput.swift in Sources */,
+				F41D70972879C78E00C03A9B /* PointCloud.swift in Sources */,
+				18D7ED4828CF42A10014A338 /* Joint.swift in Sources */,
+				F48C2A0128AE648B00959B0B /* Start_view_controller.swift in Sources */,
+				18D7ED4228CF38820014A338 /* PoseBuilder+Single.swift in Sources */,
+				E73DD13324636FEF00D77039 /* Shaders.metal in Sources */,
+				18D7ED4028CF383B0014A338 /* Pose.swift in Sources */,
+				F41D70992879C7A000C03A9B /* PointCloudVertex.swift in Sources */,
+				E7B7223D24809D1E002E43E8 /* Helpers.swift in Sources */,
+				18D7ED3C28CF330D0014A338 /* PoseNet.swift in Sources */,
+				F44AD5262878717100CF03DB /* Extension.swift in Sources */,
+				F41D7078287995B100C03A9B /* sharedViewModel.swift in Sources */,
+				F41D707A287995E600C03A9B /* Logger.swift in Sources */,
+				18D7ED4A28CF42BA0014A338 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */,
+				E7B7223B24807ACA002E43E8 /* MetalBuffer.swift in Sources */,
+				E73DD13624636FEF00D77039 /* Renderer.swift in Sources */,
+				E73DD13824636FEF00D77039 /* ViewController.swift in Sources */,
+				F41D709F2879D7A000C03A9B /* ShowPointCloudViewController.swift in Sources */,
+				E73DD13124636FEF00D77039 /* AppDelegate.swift in Sources */,
+				F41D709B2879C7D500C03A9B /* Utils.swift in Sources */,
+				F41D709D2879C7DE00C03A9B /* Event.swift in Sources */,
+				F4FD65E8287BE705003D15ED /* Loader.swift in Sources */,
+				18D7ED4628CF3B950014A338 /* PoseBuilderConfiguration.swift in Sources */,
+				18D7ED4C28CF43310014A338 /* CGImage+Extension.swift in Sources */,
+				18D7ED4428CF3B510014A338 /* PoseBuilder.swift in Sources */,
+				18D7ED3E28CF361F0014A338 /* PoseNetOutput.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E73DD13924636FEF00D77039 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E73DD13A24636FEF00D77039 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E73DD13E24636FF100D77039 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E73DD13F24636FF100D77039 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E73DD14324636FF100D77039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948146554F46E56B015690CC /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos.internal;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E73DD14424636FF100D77039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948146554F46E56B015690CC /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos.internal;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E73DD14624636FF100D77039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948146554F46E56B015690CC /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZL9DDXABC9;
+				INFOPLIST_FILE = SceneDepthPointCloud/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.SceneDepthPointCloud${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "Point Cloud";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SceneDepthPointCloud/SceneDepthPointCloud-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E73DD14724636FF100D77039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948146554F46E56B015690CC /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZL9DDXABC9;
+				INFOPLIST_FILE = SceneDepthPointCloud/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.SceneDepthPointCloud${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "Point Cloud";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SceneDepthPointCloud/SceneDepthPointCloud-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E73DD12824636FEF00D77039 /* Build configuration list for PBXProject "SceneDepthPointCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E73DD14324636FF100D77039 /* Debug */,
+				E73DD14424636FF100D77039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E73DD14524636FF100D77039 /* Build configuration list for PBXNativeTarget "SceneDepthPointCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E73DD14624636FF100D77039 /* Debug */,
+				E73DD14724636FF100D77039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F41D707D287998AB00C03A9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		F41D70922879A5FA00C03A9B /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F41D707E287998AB00C03A9B /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41D707D287998AB00C03A9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		F41D7080287998AB00C03A9B /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41D707D287998AB00C03A9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		F41D7082287998AB00C03A9B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41D707D287998AB00C03A9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F41D7084287998AB00C03A9B /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41D707D287998AB00C03A9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		F41D7086287998AB00C03A9B /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41D707D287998AB00C03A9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		F41D7088287998AB00C03A9B /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41D707D287998AB00C03A9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		F41D708A287998AB00C03A9B /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41D707D287998AB00C03A9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		F41D708C287998AB00C03A9B /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41D707D287998AB00C03A9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		F41D708E287998AB00C03A9B /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41D707D287998AB00C03A9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		F41D7090287998AB00C03A9B /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41D707D287998AB00C03A9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		F41D70932879A5FA00C03A9B /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41D70922879A5FA00C03A9B /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E73DD12524636FEF00D77039 /* Project object */;
+}
